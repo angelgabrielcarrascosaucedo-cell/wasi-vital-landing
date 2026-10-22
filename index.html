@@ -112,7 +112,7 @@
             border-radius: 2px;
         }
 
-        /* Tarjetas de Ingredientes */
+        /* Tarjetas de Ingredientes & Testimonios */
         .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -185,7 +185,7 @@
             border: 0;
         }
 
-        /* Puntos de Venta Rediseñados */
+        /* Puntos de Venta */
         .locations {
             background-color: #eaf2eb;
             padding: 60px 20px;
@@ -230,18 +230,11 @@
             background-color: #3367D6;
         }
 
-        .btn-maps.disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-            color: #666666;
-        }
-
-        /* Sección de Contacto WhatsApp */
+        /* Sección de Contacto WhatsApp e Instagram */
         .contact-section {
             background-color: white;
             padding: 60px 20px;
             text-align: center;
-            border-top: 1px solid #eee;
         }
 
         .whatsapp-btn {
@@ -255,6 +248,7 @@
             display: inline-block;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+            margin-bottom: 40px;
         }
 
         .whatsapp-btn:hover {
@@ -272,6 +266,7 @@
             margin: 50px auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             text-align: center;
+            border-top: 5px solid var(--primary);
         }
 
         .form-group {
@@ -380,8 +375,23 @@
         </div>
     </div>
 
-    <!-- VIDEO PROMOCIONAL -->
+    <!-- TESTIMONIOS (REQUISITO RÚBRICA) -->
     <section class="section">
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <div class="grid-cards">
+            <div class="card" style="text-align: left; font-style: italic;">
+                <p>"Excelente opción para las mañanas frías en la universidad. Me quitó la molestia en la garganta y sabe riquísimo."</p>
+                <small style="display: block; margin-top: 15px; font-weight: bold; color: var(--primary);">— Estudiante UPN, Cajamarca</small>
+            </div>
+            <div class="card" style="text-align: left; font-style: italic;">
+                <p>"Práctico y al instante. Lo compré en la sede Plaza de Armas y me ahorró todo el tiempo de preparación en casa."</p>
+                <small style="display: block; margin-top: 15px; font-weight: bold; color: var(--primary);">— Cliente frecuente</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO PROMOCIONAL -->
+    <section class="section" style="background-color: #f0f4f1;">
         <h2 class="section-title">Conoce WASI VITAL en Video</h2>
         <p>Descubre el proceso y la esencia de nuestra propuesta de valor.</p>
         
@@ -409,25 +419,34 @@
 
                 <div class="location-card">
                     <h3>📍 Sede Minimarket Zonal</h3>
-                    <!-- Botón desactivado temporalmente -->
-                    <span class="btn-maps disabled">🗺️ Ubicación próximamente</span>
+                    <a href="https://maps.app.goo.gl/ZpL6Sd9riw8mq3Yw7" target="_blank" class="btn-maps">🗺️ Ver en Google Maps</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE CONTACTO DIRECTO (WHATSAPP) -->
+    <!-- SECCIÓN DE CONTACTO Y REDES SOCIALES -->
     <section class="contact-section">
         <h2 class="section-title">Para más información o detalles sobre el producto</h2>
         <p style="margin-bottom: 25px; color: #555;">Si tienes alguna duda o quieres conocer más sobre WASI VITAL, contáctanos directamente:</p>
         
-        <a href="https://wa.me/51921067586" target="_blank" class="whatsapp-btn">
+        <!-- Enlace con mensaje predeterminado -->
+        <a href="https://wa.me/51921067586?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20producto%20WASI%20VITAL%20y%20la%20forma%20de%20conseguirlo." target="_blank" class="whatsapp-btn">
             💬 Escríbenos al WhatsApp: 921067586
         </a>
+
+        <!-- Enlace al Instagram Original -->
+        <div style="margin-top: 20px; padding-top: 30px; border-top: 1px solid #eee; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 1.3rem;">Wasi Machay Market</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 20px; color: #666;">Aquí puede ver los productos que se despachan actualmente en tienda, fuera del producto ofrecido:</p>
+            <a href="https://www.instagram.com/wasi.machay_market/" target="_blank" class="btn-cta" style="background-color: #E1306C; padding: 12px 25px; font-size: 1rem; box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);">
+                📸 Visita nuestro Instagram Oficial
+            </a>
+        </div>
     </section>
 
     <!-- FORMULARIO DE CAPTURA INTERACTIVO -->
-    <section id="registro" class="section">
+    <section id="registro" style="background-color: #eaf2eb; padding: 60px 20px;">
         <div class="form-section">
             <h2 style="color: var(--primary); margin-bottom: 10px;">¡Únete al Piloto de Lanzamiento!</h2>
             <p style="font-size: 0.95rem; margin-bottom: 25px; color: #666;">
