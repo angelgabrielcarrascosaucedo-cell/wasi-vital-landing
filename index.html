@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WASI VITAL - Tu defensa natural en cada sorbo</title>
-    <!-- Fuente moderna Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -85,7 +84,6 @@
         .btn-cta:hover {
             background-color: var(--button-hover);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(231,111,81,0.5);
         }
 
         /* Secciones Generales */
@@ -114,7 +112,7 @@
             border-radius: 2px;
         }
 
-        /* Tarjetas de Beneficios e Ingredientes */
+        /* Tarjetas de Ingredientes */
         .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -144,7 +142,7 @@
             margin-bottom: 10px;
         }
 
-        /* Stats Section / Validación */
+        /* Stats Section */
         .stats-container {
             background-color: var(--primary);
             color: white;
@@ -169,7 +167,7 @@
         /* Video Promocional */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             max-width: 800px;
@@ -187,7 +185,7 @@
             border: 0;
         }
 
-        /* Puntos de Venta */
+        /* Puntos de Venta Rediseñados */
         .locations {
             background-color: #eaf2eb;
             padding: 60px 20px;
@@ -196,59 +194,73 @@
         .location-list {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 35px;
         }
 
-        .location-badge {
+        .location-card {
             background: white;
-            border-left: 5px solid var(--secondary);
-            padding: 15px 25px;
-            border-radius: 8px;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 280px;
+            border-top: 5px solid var(--secondary);
+        }
+
+        .location-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .btn-maps {
+            background-color: #4285F4;
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
-            color: var(--text-dark);
-            transition: all 0.3s ease;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            font-weight: 600;
             display: inline-block;
+            transition: background-color 0.3s;
         }
 
-        .location-badge:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            color: var(--secondary);
+        .btn-maps:hover {
+            background-color: #3367D6;
         }
 
-        /* Redes Sociales */
-        .social-section {
+        .btn-maps.disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            color: #666666;
+        }
+
+        /* Sección de Contacto WhatsApp */
+        .contact-section {
             background-color: white;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
             border-top: 1px solid #eee;
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .social-btn {
-            background-color: var(--primary);
+        .whatsapp-btn {
+            background-color: #25D366;
             color: white;
-            padding: 12px 24px;
-            border-radius: 25px;
+            padding: 15px 35px;
+            border-radius: 30px;
             text-decoration: none;
+            font-size: 1.2rem;
             font-weight: 600;
+            display: inline-block;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
         }
 
-        .social-btn:hover {
-            background-color: var(--secondary);
-            transform: translateY(-2px);
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(18,140,126,0.4);
         }
 
         /* Formulario de Registro */
@@ -281,12 +293,6 @@
             border-radius: 8px;
             font-family: inherit;
             font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--secondary);
         }
 
         .btn-submit {
@@ -316,7 +322,7 @@
 </head>
 <body>
 
-    <!-- HERO SECTION CON LOGO CORREGIDO -->
+    <!-- HERO SECTION CON LOGO -->
     <header class="hero">
         <img src="LOGO.png" alt="WASI VITAL Logo" class="logo-img">
         <h1>WASI VITAL</h1>
@@ -346,7 +352,7 @@
             <div class="card">
                 <div class="card-icon">🍯</div>
                 <h3>Miel Pura de Abeja</h3>
-                <p>Suaviza las vías respiratorias y endulza naturally sin aditivos artificiales.</p>
+                <p>Suaviza las vías respiratorias y endulza naturalmente sin aditivos artificiales.</p>
             </div>
             <div class="card">
                 <div class="card-icon">🫚</div>
@@ -384,32 +390,40 @@
         </div>
     </section>
 
-    <!-- PUNTOS DE VENTA CON ENLACES A GOOGLE MAPS -->
+    <!-- PUNTOS DE VENTA CON BOTONES DE MAPS CLAROS -->
     <section class="locations">
         <div style="max-width: 900px; margin: 0 auto; text-align: center;">
             <h2 class="section-title">Disponible en Wasi Machay Market</h2>
-            <p>Haz clic en cada sede para ver su ubicación en Google Maps:</p>
+            <p>Encuéntranos en nuestras sedes. Haz clic para ver la ubicación exacta:</p>
 
             <div class="location-list">
-                <a href="https://maps.app.goo.gl/ERVLLPzTqHA8xDzc9" target="_blank" class="location-badge">📍 Sede Plaza de Armas ↗</a>
-                <a href="https://maps.app.goo.gl/FUWrpnGxXHsEgZnDA" target="_blank" class="location-badge">📍 Sede Grifo ↗</a>
-                <a href="#locations" onclick="alert('Ubicación exacta de la Sede Minimarket Zonal próximamente.'); return false;" class="location-badge">📍 Sede Minimarket Zonal</a>
+                <div class="location-card">
+                    <h3>📍 Sede Plaza de Armas</h3>
+                    <a href="https://maps.app.goo.gl/ERVLLPzTqHA8xDzc9" target="_blank" class="btn-maps">🗺️ Ver en Google Maps</a>
+                </div>
+                
+                <div class="location-card">
+                    <h3>📍 Sede Grifo</h3>
+                    <a href="https://maps.app.goo.gl/FUWrpnGxXHsEgZnDA" target="_blank" class="btn-maps">🗺️ Ver en Google Maps</a>
+                </div>
+
+                <div class="location-card">
+                    <h3>📍 Sede Minimarket Zonal</h3>
+                    <!-- Botón desactivado temporalmente -->
+                    <span class="btn-maps disabled">🗺️ Ubicación próximamente</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE REDES SOCIALES (BORRADOR) -->
-    <section class="social-section">
-        <h2 class="section-title">Síguenos en Redes Sociales</h2>
-        <p>Entérate de lanzamientos, promociones y novedades de WASI VITAL:</p>
-
-        <div class="social-links">
-            <!-- Cambia el '#' por los enlaces reales de tus redes cuando los tengas -->
-            <a href="#" target="_blank" class="social-btn">📘 Facebook</a>
-            <a href="#" target="_blank" class="social-btn">📸 Instagram</a>
-            <a href="#" target="_blank" class="social-btn">🎵 TikTok</a>
-            <a href="#" target="_blank" class="social-btn">💬 WhatsApp</a>
-        </div>
+    <!-- SECCIÓN DE CONTACTO DIRECTO (WHATSAPP) -->
+    <section class="contact-section">
+        <h2 class="section-title">Para más información o detalles sobre el producto</h2>
+        <p style="margin-bottom: 25px; color: #555;">Si tienes alguna duda o quieres conocer más sobre WASI VITAL, contáctanos directamente:</p>
+        
+        <a href="https://wa.me/51921067586" target="_blank" class="whatsapp-btn">
+            💬 Escríbenos al WhatsApp: 921067586
+        </a>
     </section>
 
     <!-- FORMULARIO DE CAPTURA INTERACTIVO -->
