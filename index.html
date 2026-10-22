@@ -208,6 +208,47 @@
             border-radius: 8px;
             font-weight: 600;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .location-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            color: var(--secondary);
+        }
+
+        /* Redes Sociales */
+        .social-section {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .social-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
         }
 
         /* Formulario de Registro */
@@ -254,7 +295,6 @@
             cursor: pointer;
         }
 
-        /* Mensaje de Confirmación */
         #mensaje-exito {
             display: none;
             background-color: #d4edda;
@@ -276,7 +316,7 @@
 </head>
 <body>
 
-    <!-- HERO SECTION CON LOGO -->
+    <!-- HERO SECTION CON LOGO CORREGIDO -->
     <header class="hero">
         <img src="LOGO.png" alt="WASI VITAL Logo" class="logo-img">
         <h1>WASI VITAL</h1>
@@ -306,7 +346,7 @@
             <div class="card">
                 <div class="card-icon">🍯</div>
                 <h3>Miel Pura de Abeja</h3>
-                <p>Suaviza las vías respiratorias y endulza naturalmente sin aditivos artificiales.</p>
+                <p>Suaviza las vías respiratorias y endulza naturally sin aditivos artificiales.</p>
             </div>
             <div class="card">
                 <div class="card-icon">🫚</div>
@@ -344,17 +384,31 @@
         </div>
     </section>
 
-    <!-- PUNTOS DE VENTA -->
+    <!-- PUNTOS DE VENTA CON ENLACES A GOOGLE MAPS -->
     <section class="locations">
         <div style="max-width: 900px; margin: 0 auto; text-align: center;">
             <h2 class="section-title">Disponible en Wasi Machay Market</h2>
-            <p>Encuéntralo en los mostradores refrigerados de nuestras 3 sedes en Cajamarca:</p>
+            <p>Haz clic en cada sede para ver su ubicación en Google Maps:</p>
 
             <div class="location-list">
-                <div class="location-badge">📍 Sede Plaza de Armas</div>
-                <div class="location-badge">📍 Sede Grifo</div>
-                <div class="location-badge">📍 Sede Minimarket Zonal</div>
+                <a href="https://maps.app.goo.gl/ERVLLPzTqHA8xDzc9" target="_blank" class="location-badge">📍 Sede Plaza de Armas ↗</a>
+                <a href="https://maps.app.goo.gl/FUWrpnGxXHsEgZnDA" target="_blank" class="location-badge">📍 Sede Grifo ↗</a>
+                <a href="#locations" onclick="alert('Ubicación exacta de la Sede Minimarket Zonal próximamente.'); return false;" class="location-badge">📍 Sede Minimarket Zonal</a>
             </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE REDES SOCIALES (BORRADOR) -->
+    <section class="social-section">
+        <h2 class="section-title">Síguenos en Redes Sociales</h2>
+        <p>Entérate de lanzamientos, promociones y novedades de WASI VITAL:</p>
+
+        <div class="social-links">
+            <!-- Cambia el '#' por los enlaces reales de tus redes cuando los tengas -->
+            <a href="#" target="_blank" class="social-btn">📘 Facebook</a>
+            <a href="#" target="_blank" class="social-btn">📸 Instagram</a>
+            <a href="#" target="_blank" class="social-btn">🎵 TikTok</a>
+            <a href="#" target="_blank" class="social-btn">💬 WhatsApp</a>
         </div>
     </section>
 
@@ -397,12 +451,10 @@
         <p>&copy; 2026 WASI VITAL - Proyecto Innovación y Emprendimiento (UPN Cajamarca)</p>
     </footer>
 
-    <!-- SCRIPT INTERACTIVO PARA EVITAR ERRORES EN EL FORMULARIO -->
+    <!-- SCRIPT INTERACTIVO -->
     <script>
         document.getElementById('wasiForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita que la página intente recargarse o dar error 404
-            
-            // Simulación de envío exitoso
+            e.preventDefault();
             document.getElementById('wasiForm').style.display = 'none';
             document.getElementById('mensaje-exito').style.display = 'block';
         });
