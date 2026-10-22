@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASI VITAL - Tu defensa natural</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2e3d30;
+            background-color: #f7faf7;
+            text-align: center;
+        }
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e4620, #38703d);
+            color: white;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+        }
+        .btn-cta {
+            background-color: #e67e22;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn-cta:hover {
+            background-color: #d35400;
+        }
+        /* Secciones */
+        .section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            width: 250px;
+        }
+        /* Testimonios */
+        .testimonials {
+            background-color: #eaf2eb;
+            padding: 50px 20px;
+        }
+        .testimonial-box {
+            background: white;
+            border-left: 5px solid #38703d;
+            padding: 15px 20px;
+            max-width: 600px;
+            margin: 15px auto;
+            text-align: left;
+            font-style: italic;
+        }
+        /* Formulario */
+        .form-section {
+            background-color: white;
+            padding: 50px 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        input[type="email"], input[type="text"] {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. TITULAR ATRACTIVO Y CLARO + CTA -->
+    <header class="hero">
+        <h1>WASI VITAL</h1>
+        <p>Tu defensa natural en cada sorbo. Remedio casero listo para beber a base de menta, limón y miel de abeja.</p>
+        <a href="#registro" class="btn-cta">¡Pruébalo por S/ 4.00!</a>
+    </header>
+
+    <!-- 2. DESCRIPCIÓN Y BENEFICIOS DEL PRODUCTO -->
+    <section class="section">
+        <h2>¿Por qué elegir WASI VITAL?</h2>
+        <p>Ahorra tiempo cuidando tu salud. Sin necesidad de hervir ni exprimir en casa, disfruta la infusión tradicional en tu tienda Wasi Machay Market más cercana.</p>
+        
+        <div class="features">
+            <div class="card">
+                <h3>100% Natural</h3>
+                <p>Menta fresca, jugo de limón e infusión con miel pura de abeja.</p>
+            </div>
+            <div class="card">
+                <h3>Listo para beber</h3>
+                <p>Presentación embotellada de 300 ml conservada siempre en frío.</p>
+            </div>
+            <div class="card">
+                <h3>Receta Tradicional</h3>
+                <p>La fórmula de confianza que combate el resfrío en épocas de frío.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TESTIMONIOS DE CLIENTES SATISFECHOS -->
+    <section class="testimonials">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="testimonial-box">
+            <p>"Excelente opción para las mañanas frías en la universidad. Me quitó la molestia en la garganta y sabe riquísimo."</p>
+            <small>— Estudiante UPN, Cajamarca</small>
+        </div>
+        <div class="testimonial-box">
+            <p>"Práctico y al instante. Lo compré en la sede Plaza de Armas de Wasi Machay y me ahorró todo el tiempo de preparación."</p>
+            <small>— Cliente frecuente Wasi Machay Market</small>
+        </div>
+    </section>
+
+    <!-- 4. FORMULARIO DE CONTACTO / REGISTRO -->
+    <section id="registro" class="form-section">
+        <h2>Sé el primero en probarlo</h2>
+        <p>Déjanos tu nombre y correo para recibir una muestra gratuita en tu próxima visita a Wasi Machay Market.</p>
+        <form action="#" method="POST">
+            <input type="text" name="nombre" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+            <button type="submit" class="btn-cta" style="border:none; cursor:pointer; width:95%; margin-top:10px;">¡Quiero mi muestra!</button>
+        </form>
+    </section>
+
+</body>
+</html>
